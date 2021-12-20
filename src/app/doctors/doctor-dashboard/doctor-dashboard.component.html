@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>Caresway</div>
+  <div>
+    <button mat-button>Home</button>
+    <button mat-button (click)="goToAppointments()">My Appointments</button>
+    <button mat-button (click)="goToClinics()">My Clinics</button>
+    <button mat-button (click)="goToMyProfile()">My Profile</button>
+    <button mat-button (click)="logout()">Logout</button>
+  </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

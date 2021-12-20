@@ -1,0 +1,26 @@
+export interface patientProfileInterface{
+    "patient_name":string,
+    "patient_email":string,
+    "patient_allergies":string,
+    "patient_other_illness":[
+        illness_name:string,
+        medication_name:string,
+        medication_doses:string,
+        medication_prescribedBy:string,
+    ],
+    "patient_operations_surgeries":[
+        operation_surgery_name:string,
+        date:Date,
+    ],
+    "patient_family_history":[
+        relation:string,
+        illness:string
+    ],
+    "patient_contact_number":number,
+    "patient_dob":Date,
+    "patient_height":number,
+    "patient_weight":number,
+    "patient_gender":string,
+    "patient_address":string,
+    "patient_blood_group":string
+}

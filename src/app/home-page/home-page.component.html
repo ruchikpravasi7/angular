@@ -1,0 +1,38 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>Caresway</div>
+  <div>
+    <button mat-button routerLink="/home" routerActiveLink="active">
+      Home
+    </button>
+    <button mat-button routerLink="/doctors" routerActiveLink="active">
+      Doctors
+    </button>
+    <button mat-button routerLink="/clinics" routerActiveLink="active">
+      Clinics
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="beforeMenu">Account</button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item routerLink="/login" routerActiveLink="active">
+        Login
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="subMenu">SignUp</button>
+    </mat-menu>
+    <mat-menu #subMenu="matMenu" xPosition="before">
+      <button
+        mat-menu-item
+        routerLink="/doctor_signup"
+        routerActiveLink="active"
+      >
+        As Doctor
+      </button>
+      <button
+        mat-menu-item
+        routerLink="/patient_signup"
+        routerActiveLink="active"
+      >
+        As Patient
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

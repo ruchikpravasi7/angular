@@ -1,0 +1,22 @@
+<mat-list *ngFor="let appointment of appointments">
+  <mat-card class="matCard">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title
+        >Doctor Name: {{ appointment.doctor_name }}</mat-card-title
+      >
+      <mat-card-subtitle
+        >Appointment Date: {{ appointment.appointment_date }}</mat-card-subtitle
+      >
+      <mat-card-subtitle
+        >Appointment Time: {{ appointment.appointment_time }}</mat-card-subtitle
+      >
+      <button
+        mat-raised-button
+        class="viewPresButtonClass"
+      >
+        Chat
+      </button>
+    </mat-card-header>
+  </mat-card>
+</mat-list>

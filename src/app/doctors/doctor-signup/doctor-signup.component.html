@@ -1,0 +1,100 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>Caresway</div>
+  <div>
+    <button mat-button routerLink="/home" routerActiveLink="active">
+      Home
+    </button>
+    <button mat-button routerLink="/doctors" routerActiveLink="active">
+      Doctors
+    </button>
+    <button mat-button routerLink="/clinics" routerActiveLink="active">
+      Clinics
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="beforeMenu">Account</button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item routerLink="/login" routerActiveLink="active">
+        Login
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="subMenu">SignUp</button>
+    </mat-menu>
+    <mat-menu #subMenu="matMenu" xPosition="before">
+      <button
+        mat-menu-item
+        routerLink="/doctor_signup"
+        routerActiveLink="active"
+      >
+        As Doctor
+      </button>
+      <button
+        mat-menu-item
+        routerLink="/patient_signup"
+        routerActiveLink="active"
+      >
+        As Patient
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+<form class="example-form">
+  <div class="titleClass">Doctor SignUp</div>
+
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Full Name</mat-label>
+          <input matInput name="fullname" [(ngModel)]="fullName" />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput name="email" [(ngModel)]="email" />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Speciality</mat-label>
+          <input matInput name="Speciality" [(ngModel)]="speciality" />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            name="password"
+            type="password"
+            [(ngModel)]="password"
+          />
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <div class="signupbuttonclass">
+    <button mat-raised-button (click)="signup()">Sign up</button>
+  </div>
+  <div class="adiv">
+    <a routerLink="/patient_signup" routerActiveLink="active"
+      >Not doctor? Patient SignUp here</a
+    >
+
+
+    <input class="ng-hide" id="input-file-id" multiple type="file" />
+<label for="input-file-id" class="md-button md-raised md-primary">Choose Files</label>
+  </div>
+</form>

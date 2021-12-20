@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+.matCard {
+  margin: 10px;
+  background-color: #8f9292;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+}
+
+.example-form-div {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.example-full-width {
+  align-self: center;
+  margin: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+}
+
+td {
+  padding-right: 8px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.a-class {
+  margin: 20px;
+}
+
+.title {
+  margin: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  text-align: center;
+}
+
+.navbar {
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  justify-content: space-between;
+}
+
+button {
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+}
+
+.formclass {
+  text-align: center;
+}
+
+.example-header-image {
+  /* text-align: center; */
+  background-image: url("../../assets/images/profile.png");
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  /* object-fit:none; */
+}
+
+/* .avatarClass{
+    text-align: center;
+  } */
+
+.mat-card {
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+}
+
+.mat-card-actions-class {
+  position: sticky;
+  text-align: end;
+  align-content: flex-end;
+  margin-top: 50%;
+}

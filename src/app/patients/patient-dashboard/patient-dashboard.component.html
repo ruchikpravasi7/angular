@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>Caresway</div>
+  <div>
+    <button mat-button  (click)="goToDoctorsList()">
+      Doctors
+    </button>
+    <button mat-button routerLink="clinics" routerActiveLink="active">
+      Clinics
+    </button>
+    <button mat-button routerLink="appointments" routerActiveLink="active">
+      Appointments
+    </button>
+    <button mat-button routerLink="chat" routerActiveLink="active">
+      Chat
+    </button>
+    <button mat-button routerLink="profile" routerActiveLink="active">
+      Profile
+    </button>
+
+    <button mat-button (click)="logout()">
+      Logout
+    </button>
+
+  </div>
+</mat-toolbar>
+
+<!-- <mat-toolbar color="primary" class="navbar">
+    <div>Caresway</div>
+    <div>
+      <button mat-button (click)="goToDoctorsList()">Doctors</button>
+      <button mat-button >Clinics</button>
+      <button mat-button routerLink="appointments" routerActiveLink="active">Appoinmnets</button>
+      <button mat-button routerLink="profile" routerActiveLink="active">Profile</button>
+  
+      <button mat-button (click)="logout()">Logout</button>
+      </div>
+  </mat-toolbar> -->
+
+  <router-outlet></router-outlet>

@@ -1,0 +1,21 @@
+<mat-card class="mainMatCard" >
+    <mat-list >
+          <mat-card-header class="mat-card-header-class">
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Doctor Name: {{DoctorProfile.doctor_name}}</mat-card-title>
+            <mat-card-subtitle>email: {{DoctorProfile.doctor_email}}</mat-card-subtitle>
+            <mat-card-subtitle>contact number: {{DoctorProfile.doctor_contact_no}}</mat-card-subtitle> 
+            <mat-card-subtitle>speciality: {{DoctorProfile.doctor_speciality}}</mat-card-subtitle> 
+            <mat-card-subtitle>gender: {{DoctorProfile.doctor_gender}}</mat-card-subtitle> 
+            <mat-card-subtitle>Education: {{DoctorProfile.doctor_education}}</mat-card-subtitle> 
+
+        
+            <div class="editButtonClass">
+            <button  mat-raised-button (click)="doctorProfileEdit(DoctorProfile.doctor_id)">Edit</button>
+          </div>
+          </mat-card-header>
+
+      </mat-list>
+      <router-outlet></router-outlet>
+</mat-card>
+

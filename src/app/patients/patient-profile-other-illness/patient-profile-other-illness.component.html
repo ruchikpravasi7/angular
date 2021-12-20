@@ -1,0 +1,10 @@
+<mat-list *ngFor="let otherillness of PatientProfile.patient_other_illness">
+  <mat-card class="matCard">
+    <mat-card-header>
+      <mat-card-subtitle>Illness name: {{ otherillness.illness_name }}</mat-card-subtitle>
+      <mat-card-subtitle>Medication name: {{ otherillness.medication_name }}</mat-card-subtitle>
+      <mat-card-subtitle>Medication doses: {{ otherillness.medication_doses }}</mat-card-subtitle>
+      <mat-card-subtitle>Prescibed By: {{ otherillness.medication_prescribedBy }}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</mat-list>

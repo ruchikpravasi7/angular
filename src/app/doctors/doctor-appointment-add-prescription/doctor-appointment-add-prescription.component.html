@@ -1,0 +1,11 @@
+<mat-list *ngFor="let pres of prescriptions">
+    <mat-card class="matCard">
+      <mat-card-header>
+        <mat-card-subtitle>Tablet Name: {{ pres.tabletName }}</mat-card-subtitle>
+        <mat-card-subtitle>Quantity: {{ pres.Quantity }}</mat-card-subtitle>
+        <mat-card-subtitle>Dose: {{ pres.dose }}</mat-card-subtitle>
+        <mat-card-subtitle>Number of Days: {{ pres.numberOfDays }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </mat-list>
+  

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto; 
+    font-family:'Playfair Display', serif;
+    font-size: 18px;
+  }
+
+  .example-form-div{
+    font-family:'Playfair Display', serif;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  
+  h2{
+      text-align: center;
+  }
+
+  .a-class{
+    margin: 20px;
+  }
+
+  .title{
+    margin: 20px;
+    font-family:'Playfair Display', serif;
+    font-size: 21px;
+    text-align: center;
+  }
+
+  .navbar{
+    font-family:'Playfair Display', serif;
+    font-size: 21px; 
+    justify-content: space-between;
+  }
+
+  button{
+    font-family:'Playfair Display', serif;
+    font-size: 15px;
+  }
+
+  .matcardform{
+    text-align: center;
+    height: fit-content;
+    width: 50%;
+  }
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.adiv {
+  text-align: center;
+  margin: 20px;
+}
+
+.signupbuttonclass{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.titleClass{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 21px;
+}

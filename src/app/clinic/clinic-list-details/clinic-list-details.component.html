@@ -1,0 +1,59 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>Caresway</div>
+  <div>
+    <button mat-button routerLink="/home" routerActiveLink="active">
+      Home
+    </button>
+    <button mat-button routerLink="/doctors" routerActiveLink="active">
+      Doctors
+    </button>
+    <button mat-button routerLink="/clinics" routerActiveLink="active">
+      Clinics
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="beforeMenu">Account</button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item routerLink="/login" routerActiveLink="active">
+        Login
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="subMenu">SignUp</button>
+    </mat-menu>
+    <mat-menu #subMenu="matMenu" xPosition="before">
+      <button
+        mat-menu-item
+        routerLink="/doctor_signup"
+        routerActiveLink="active"
+      >
+        As Doctor
+      </button>
+      <button
+        mat-menu-item
+        routerLink="/patient_signup"
+        routerActiveLink="active"
+      >
+        As Patient
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+<div class="presviousButtonClass">
+  <button mat-raised-button (click)="previous()">Back</button>
+</div>
+
+<mat-card class="matCardClass">
+  <mat-card-header>
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    <mat-card-title>Name: {{ DoctorData.doctor_name }}</mat-card-title>
+    <mat-card-subtitle>Email: {{ DoctorData.doctor_email }}</mat-card-subtitle>
+    <mat-card-subtitle
+      >Doctor Speciality: {{ DoctorData.doctor_speciality }}</mat-card-subtitle
+    >
+  </mat-card-header>
+
+  <button mat-raised-button (click)="bookAppointment()">
+    book appointment
+  </button>
+</mat-card>
+
+<router-outlet></router-outlet>

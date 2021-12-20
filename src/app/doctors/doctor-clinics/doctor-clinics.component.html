@@ -1,0 +1,83 @@
+<div *ngIf="!addClinicFlag" class="addClinicButtonClass">
+  <button  mat-raised-button (click)="add()">Add Clinic</button>
+
+</div>
+<div *ngIf="addClinicFlag" class="goBackButtonClass">
+  <button  mat-raised-button (click)="goBack()">Back</button>
+
+</div>
+
+<mat-card *ngIf="addClinicFlag" class="ifClass">
+  <mat-card-content>
+    <mat-card-actions class="mat-card-actions-time-class">
+      <div class="timeTextClasss">Add Clinic:</div>
+      <table class="timeInputClass" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Clinic name</mat-label>
+              <input matInput name="clinic_name" type="text" [(ngModel)]="clinic_name" />
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Clinic timing</mat-label>
+              <input matInput name="clinic_timing" type="text" [(ngModel)]="clinic_timing" />
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Area</mat-label>
+              <input matInput type="text" [(ngModel)]="area" />
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>City</mat-label>
+              <input matInput type="text" [(ngModel)]="city" />
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>State</mat-label>
+              <input matInput type="text" [(ngModel)]="state" />
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Country</mat-label>
+              <input matInput type="text" [(ngModel)]="country" />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </mat-card-actions>
+    <div></div>
+    <button mat-raised-button (click)="addClinic()">
+      Add
+    </button>
+  </mat-card-content>
+</mat-card>
+
+<div *ngIf="!addClinicFlag">
+<mat-list  *ngFor="let clinic of clinicsData">
+    <mat-card class="matCard">
+      <mat-card-header>
+        <mat-card-subtitle>Clinic Name: {{ clinic.clinic_name }}</mat-card-subtitle>
+        <mat-card-subtitle>Clinic Timing: {{ clinic.clinic_timing }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </mat-list>
+  </div>
+  

@@ -1,0 +1,167 @@
+<mat-card class="mainMatCard">
+  <mat-list>
+    <mat-card-header class="mat-card-header-class">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ appointment.patient_name }}</mat-card-title>
+      <mat-card-subtitle>{{ appointment.patient_email }}</mat-card-subtitle>
+      <mat-card-subtitle>{{ appointment.appointmentDate }}</mat-card-subtitle>
+      <mat-card-subtitle>{{ appointment.appointmentTime }}</mat-card-subtitle>
+      <div class="PrescriptionbuttonClass">
+        <button
+          mat-raised-button
+          *ngIf="appointment.completed"
+          (click)="addPrescription(appointment.appointmentId)"
+        >
+          Add Prescription
+        </button>
+      </div>
+    </mat-card-header>
+  </mat-list>
+
+  <mat-button-toggle-group
+    class="mat-button-toggle-group-class"
+    name="fontStyle"
+    aria-label="Font Style"
+    #toggleGroup="matButtonToggleGroup"
+  >
+    <mat-button-toggle value="otherIllness" (change)="onValChange($event.value)"
+      >illness</mat-button-toggle
+    >
+    <mat-button-toggle
+      value="operationsSurgeries"
+      (change)="onValChange($event.value)"
+      >operations/surgeries</mat-button-toggle
+    >
+    <mat-button-toggle
+      value="familyHistory"
+      (change)="onValChange($event.value)"
+      >Family History</mat-button-toggle
+    >
+    <mat-button-toggle
+      *ngIf="appointment.completed"
+      value="prescription"
+      (change)="onValChange($event.value)"
+      >Prescription</mat-button-toggle
+    >
+  </mat-button-toggle-group>
+
+  <router-outlet></router-outlet>
+
+  <button
+    mat-raised-button
+    *ngIf="!appointment.completed"
+    (click)="onComplete()"
+  >
+    Complete
+  </button>
+  <!-- <button
+    mat-raised-button
+    *ngIf="!appointment.completed"
+    (click)="onReschedule()"
+  >
+    Reschedule
+  </button> -->
+  <button
+    mat-raised-button
+    *ngIf="!appointment.completed"
+    (click)="onCancel(appointment.appointmentId)"
+  >
+    Cancel
+  </button>
+
+  <!-- <mat-card *ngIf="resFlag">
+    <mat-card-content>
+      <mat-card-actions>
+        <div class="timeTextClasss">Enter Date:</div>
+        <mat-form-field class="chooseDateClass" appearance="fill">
+          <mat-label>Choose a date</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            (dateInput)="OnDateChange($event.value)"
+            [min]="minDate"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker ngDefaultControl></mat-datepicker>
+        </mat-form-field>
+      </mat-card-actions>
+
+      <mat-card-actions class="mat-card-actions-time-class">
+        <div class="timeTextClasss">Enter Time:</div>
+        <table class="timeInputClass" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>Time</mat-label>
+                <input matInput type="text" [(ngModel)]="time" />
+              </mat-form-field>
+            </td>
+
+            <td>
+              <mat-form-field appearance="fill">
+                <mat-label>Select an option</mat-label>
+                <mat-select (selectionChange)="getTime($event.value)">
+                  <mat-option value="AM">AM</mat-option>
+                  <mat-option value="PM">PM</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+      </mat-card-actions>
+      <div></div>
+      <button mat-raised-button (click)="reschedule()">
+        Confirm appointment
+      </button>
+    </mat-card-content>
+  </mat-card> -->
+
+  <mat-card *ngIf="presFlag">
+    <mat-card-content>
+      <mat-card-actions class="mat-card-actions-time-class">
+        <div class="timeTextClasss">Prescription:</div>
+        <table class="timeInputClass" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>tabletName</mat-label>
+                <input matInput type="text" [(ngModel)]="tabletName" />
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>Quantity</mat-label>
+                <input matInput type="text" [(ngModel)]="Quantity" />
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>dose</mat-label>
+                <input matInput type="text" [(ngModel)]="dose" />
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>duration</mat-label>
+                <input matInput type="text" [(ngModel)]="numberOfDays" />
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+      </mat-card-actions>
+      <div></div>
+      <button mat-raised-button (click)="prescription()">
+        Add
+      </button>
+    </mat-card-content>
+  </mat-card>
+</mat-card>

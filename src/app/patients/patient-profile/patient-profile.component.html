@@ -1,0 +1,23 @@
+<mat-card class="mainMatCard" >
+    <mat-list >
+          <mat-card-header class="mat-card-header-class">
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Patient Name: {{PatientProfile.patient_name}}</mat-card-title>
+            <mat-card-subtitle>Patient Email: {{PatientProfile.patient_email}}</mat-card-subtitle>
+            <div class="editButtonClass">
+            <button  mat-raised-button (click)="patientProfileEdit()">Edit</button>
+          </div>
+          </mat-card-header>
+
+      </mat-list>
+    
+      <mat-button-toggle-group class="mat-button-toggle-group-class" name="fontStyle" aria-label="Font Style" #toggleGroup="matButtonToggleGroup">
+        <mat-button-toggle value="about" (change)="onValChange($event.value)">About</mat-button-toggle>
+        <mat-button-toggle value="otherIllness" (change)="onValChange($event.value)">other illness</mat-button-toggle>
+        <mat-button-toggle value="operationsSurgeries" (change)="onValChange($event.value)">operations/surgeries</mat-button-toggle>
+        <mat-button-toggle value="familyHistory" (change)="onValChange($event.value)">Family History</mat-button-toggle>
+      </mat-button-toggle-group>
+
+      <router-outlet></router-outlet>
+</mat-card>
+

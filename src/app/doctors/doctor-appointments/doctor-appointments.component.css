@@ -1,0 +1,21 @@
+.matCard{
+    margin: 10px;
+    background-color:8f9292;
+}
+
+.viewAppointmentButtonClass{
+    text-align: center;
+    margin-left: 70%;
+
+    height: 40px;
+    margin-top: 20px;
+}
+
+.mat-button-toggle-group-class{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.example-header-image{
+    width: max-content;
+}

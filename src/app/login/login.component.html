@@ -1,0 +1,100 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>Caresway</div>
+  <div>
+    <button mat-button routerLink="/home" routerActiveLink="active">
+      Home
+    </button>
+    <button mat-button routerLink="/doctors" routerActiveLink="active">
+      Doctors
+    </button>
+    <button mat-button routerLink="/clinics" routerActiveLink="active">
+      Clinics
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="beforeMenu">Account</button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item routerLink="/login" routerActiveLink="active">
+        Login
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="subMenu">SignUp</button>
+    </mat-menu>
+    <mat-menu #subMenu="matMenu" xPosition="before">
+      <button
+        mat-menu-item
+        routerLink="/doctor_signup"
+        routerActiveLink="active"
+      >
+        As Doctor
+      </button>
+      <button
+        mat-menu-item
+        routerLink="/patient_signup"
+        routerActiveLink="active"
+      >
+        As Patient
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+<div class="example-form-div">
+  <p class="title">Login</p>
+
+  <form class="example-form" (submit)="onSubmit()">
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="emailValue" name="email" />
+            <button
+              mat-button
+              *ngIf="emailValue"
+              matSuffix
+              mat-icon-button
+              aria-label="Clear"
+              (click)="emailValue = ''"
+            >
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              [formControl]="passwordValue"
+              name="password"
+              type="password"
+            />
+            <button
+              mat-button
+              *ngIf="passwordValue"
+              matSuffix
+              mat-icon-button
+              aria-label="Clear"
+              (click)="passwordValue = ''"
+            >
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <div>
+    <button mat-raised-button (click)="login()">Login</button>
+  </div>
+  <div class="a-class">
+    <a routerLink="/patient_signup" routerActiveLink="active"
+      >Not registered? SignUp here</a
+    >
+  </div>
+</div>
+
+<br /><br />

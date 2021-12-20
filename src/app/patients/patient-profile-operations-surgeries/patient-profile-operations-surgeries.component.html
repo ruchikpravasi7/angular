@@ -1,0 +1,9 @@
+<mat-list *ngFor="let operations_surgeries of PatientProfile.patient_operations_surgeries">
+    <mat-card class="matCard">
+      <mat-card-header>
+        <mat-card-subtitle>Operations/Surgeries{{ operations_surgeries.operation_surgery_name }}</mat-card-subtitle>
+        <mat-card-subtitle>Date: {{ operations_surgeries.date }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </mat-list>
+  
