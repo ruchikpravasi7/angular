@@ -1,5 +1,26 @@
 <div>
-    <button style="margin: 2px;" mat-raised-button>Search</button>
-    <button style="margin: 2px;" mat-raised-button>Store</button>
-    <button style="margin: 2px;" mat-raised-button>Login</button>
+  <button
+    style="margin: 2px"
+    value="search"
+    mat-raised-button
+    (click)="redirect('search')"
+  >
+    Search
+  </button>
+  <button
+    style="margin: 2px"
+    value="store"
+    mat-raised-button
+    (click)="redirect('store')"
+  >
+    Store
+  </button>
+  <button
+    style="margin: 2px"
+    value="login"
+    mat-raised-button
+    (click)="redirect('login')"
+  >
+    Login
+  </button>
 </div>

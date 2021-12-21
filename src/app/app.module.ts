@@ -30,6 +30,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FullComponent } from '../app/shared/layouts/full/full.component';
+import { SearchComponent } from './search/search/search.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { FullComponent } from '../app/shared/layouts/full/full.component';
     SpinnerComponent,
     AppBlankComponent,
     VerticalAppSidebarComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,10 +7,16 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { AppBlankComponent } from './shared/layouts/blank/blank.component';
 import { FullComponent } from './shared/layouts/full/full.component';
+import { SearchComponent } from './search/search/search.component';
 
 const routes: Routes = [
-  { path: '', component: FullComponent },
-  { path: 'admin', component: FullComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/admin' },
+  {
+    path: 'admin', component: FullComponent,
+    children: [
+      { path: 'search', component: SearchComponent }
+    ]
+  },
   { path: 'home', component: HomePageComponent },
   { path: 'login', component: LoginComponent },
   { path: '**', component: PageNotFoundComponent },
@@ -25,5 +31,6 @@ export const routingComponents = [
   HomePageComponent,
   LoginComponent,
   PageNotFoundComponent,
-  FullComponent
+  FullComponent,
+  SearchComponent
 ];

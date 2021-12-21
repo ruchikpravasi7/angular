@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 //import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
@@ -106,9 +107,10 @@ export class VerticalAppHeaderComponent {
   }]
 
   constructor(
+    private router: Router
     //private translate: TranslateService, 
     //private authService: AuthService
-    ) {
+  ) {
     //translate.setDefaultLang('en');
   }
 
@@ -119,5 +121,13 @@ export class VerticalAppHeaderComponent {
 
   handleSignout() {
     //this.authService.logout();
+  }
+
+  redirect(str: string) {
+    if (str === 'login') {
+      //
+    } else {
+      this.router.navigate(['admin', str])
+    }
   }
 }
