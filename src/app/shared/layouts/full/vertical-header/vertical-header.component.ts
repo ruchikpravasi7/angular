@@ -105,14 +105,15 @@ export class VerticalAppHeaderComponent {
     icon: 'de'
   }]
 
-  constructor(private translate: TranslateService, 
+  constructor(
+    //private translate: TranslateService, 
     //private authService: AuthService
     ) {
-    translate.setDefaultLang('en');
+    //translate.setDefaultLang('en');
   }
 
   changeLanguage(lang: any) {
-    this.translate.use(lang.code)
+    //this.translate.use(lang.code)
     this.selectedLanguage = lang;
   }
 

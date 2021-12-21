@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 export class LoginServiceService {
   constructor(private http: HttpClient,private router:Router) {}
 
-  getUser(email, password): Observable<LoginInterface[]> {
+  getUser(email:string, password:string): Observable<LoginInterface[]> {
     return this.http.post<LoginInterface[]>('http://localhost:3000/login', {
       email,
       password,

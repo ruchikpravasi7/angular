@@ -11,23 +11,20 @@
             <!-- ============================================================== -->
             <!-- Logo - style you can find in header.scss -->
             <!-- ============================================================== -->
-            <div class="navbar-header">
+            <!-- <div class="navbar-header">
                 <a class="navbar-brand" href="/">
-                    <!-- Logo icon -->
                     <b>
-                        <!-- Light Logo icon -->
-                        <img src="../../../assets/images/Full Blue.svg" alt="homepage" class="light-logo"
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/doctor-1659516-1410038.png" alt="homepage" class="light-logo"
                             style="width: 130px;">
                     </b>
-                    <!--End Logo icon -->
                 </a>
-            </div>
+            </div> -->
             <!-- ============================================================== -->
             <!-- sidebar toggle -->
             <!-- ============================================================== -->
-            <button mat-icon-button (click)="snav.toggle()" class="sidebar-toggle" value="sidebarclosed">
+            <!-- <button mat-icon-button (click)="snav.toggle()" class="sidebar-toggle" value="sidebarclosed">
                 <mat-icon>menu</mat-icon>
-            </button>
+            </button> -->
 
             <span fxFlex></span>
             <!-- ============================================================== -->
@@ -47,12 +44,12 @@
     <!-- ============================================================== -->
     <!-- End Topbar - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0"
-        [ngClass]="{'minisidebar': minisidebar}">
+    <!-- <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0"
+        [ngClass]="{'minisidebar': minisidebar}"> -->
         <!-- ============================================================== -->
         <!-- Sidebar - style you can find in sidebar.scss -->
         <!-- ============================================================== -->
-        <mat-sidenav #snav id="snav" class="pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0"
+        <!-- <mat-sidenav #snav id="snav" class="pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0"
             [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches" (open)="sidebarOpened = true"
             (close)="sidebarOpened = false">
 
@@ -61,21 +58,21 @@
                 </app-vertical-sidebar>
             </perfect-scrollbar>
 
-        </mat-sidenav>
+        </mat-sidenav> -->
 
         <!-- ============================================================== -->
         <!-- Page container - style you can find in pages.scss -->
         <!-- ============================================================== -->
-        <mat-sidenav-content class="page-wrapper" [ngClass]="status ? 'minitoggle' : ''">
+        <!-- <mat-sidenav-content class="page-wrapper" [ngClass]="status ? 'minitoggle' : ''"> -->
             <!-- <app-breadcrumb></app-breadcrumb> -->
-            <div class="page-content">
+            <!-- <div class="page-content">
                 <router-outlet>
                     <app-spinner></app-spinner>
                 </router-outlet>
             </div>
         </mat-sidenav-content>
-        <!-- ============================================================== -->
+        ============================================================== -->
         <!-- Page container - style you can find in pages.scss -->
         <!-- ============================================================== -->
-    </mat-sidenav-container>
+    <!-- </mat-sidenav-container> -->
 </div>

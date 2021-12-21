@@ -33,54 +33,54 @@ export interface Menu {
 
 const MENUITEMS = [
   {
-    state: '/admin/dashboard',
+    state: '/admin',
     name: 'Dashboard',
     type: 'link',
     icon: 'dashboard',
-    allowedRoles: ['practice', 'admin'],
+    allowedRoles: [],
   },
-  {
-    state: '/admin/practices',
-    name: 'Practice Admins',
-    type: 'link',
-    icon: 'verified_user',
-    allowedRoles: ['admin'],
-  },
-  {
-    state: '/admin/doctors',
-    name: 'Doctors',
-    type: 'link',
-    icon: 'account_circle',
-    allowedRoles: ['practice', 'admin'],
-  },
-  {
-    state: '/admin/appointments',
-    name: 'Appointments',
-    type: 'link',
-    icon: 'today',
-    allowedRoles: ['practice'],
-  },
-  {
-    state: '/admin/speciality',
-    name: 'Specialities',
-    type: 'link',
-    icon: 'work',
-    allowedRoles: ['admin'],
-  },
-  {
-    state: '/admin/clients',
-    name: 'Patients',
-    type: 'link',
-    icon: 'people',
-    allowedRoles: ['practice', 'admin'],
-  },
-  {
-    state: '/admin/adcampaigns',
-    name: 'Campaigns',
-    type: 'link',
-    icon: 'campaign',
-    allowedRoles: ['admin'],
-  },
+  // {
+  //   state: '/admin/practices',
+  //   name: 'Practice Admins',
+  //   type: 'link',
+  //   icon: 'verified_user',
+  //   allowedRoles: ['admin'],
+  // },
+  // {
+  //   state: '/admin/doctors',
+  //   name: 'Doctors',
+  //   type: 'link',
+  //   icon: 'account_circle',
+  //   allowedRoles: ['practice', 'admin'],
+  // },
+  // {
+  //   state: '/admin/appointments',
+  //   name: 'Appointments',
+  //   type: 'link',
+  //   icon: 'today',
+  //   allowedRoles: ['practice'],
+  // },
+  // {
+  //   state: '/admin/speciality',
+  //   name: 'Specialities',
+  //   type: 'link',
+  //   icon: 'work',
+  //   allowedRoles: ['admin'],
+  // },
+  // {
+  //   state: '/admin/clients',
+  //   name: 'Patients',
+  //   type: 'link',
+  //   icon: 'people',
+  //   allowedRoles: ['practice', 'admin'],
+  // },
+  // {
+  //   state: '/admin/adcampaigns',
+  //   name: 'Campaigns',
+  //   type: 'link',
+  //   icon: 'campaign',
+  //   allowedRoles: ['admin'],
+  // },
 ];
 
 @Injectable()
