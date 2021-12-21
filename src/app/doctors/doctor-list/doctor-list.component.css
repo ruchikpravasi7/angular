@@ -62,7 +62,7 @@ button {
 
 .example-header-image {
   /* text-align: center; */
-  background-image: url("../../assets/images/profile.png");
+  background-image: url("../../../assets/images/profile.png");
   background-size: contain;
   height: 100px;
   width: 100px;
