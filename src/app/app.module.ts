@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { MaterialModule } from './material-module';
 import { MaterialComponentsModule } from './material-component/material.module';
 
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { LoginServiceService } from './shared/services/login-service.service';
@@ -20,7 +20,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppBlankComponent } from '../app/shared/layouts/blank/blank.component';
 
 import { VerticalAppHeaderComponent } from '../app/shared/layouts/full/vertical-header/vertical-header.component';
-import { VerticalAppSidebarComponent } from '../app/shared/layouts/full/vertical-sidebar/vertical-sidebar.component';
 import { SpinnerComponent } from './shared/spinner.component';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -31,7 +30,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FullComponent } from '../app/shared/layouts/full/full.component';
 import { SearchComponent } from './search/search/search.component';
-
+import { StoreListingComponent } from './store/store-listing/store-listing.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,8 +44,8 @@ import { SearchComponent } from './search/search/search.component';
     VerticalAppHeaderComponent,
     SpinnerComponent,
     AppBlankComponent,
-    VerticalAppSidebarComponent,
     SearchComponent,
+    StoreListingComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,12 +53,14 @@ import { SearchComponent } from './search/search/search.component';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    MaterialComponentsModule
+    MaterialComponentsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [AuthGuard,LoginServiceService,{
-    provide:HTTP_INTERCEPTORS,
+  providers: [AuthGuard, LoginServiceService, {
+    provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptorService,
-    multi:true
+    multi: true
   }],
   bootstrap: [AppComponent]
 })

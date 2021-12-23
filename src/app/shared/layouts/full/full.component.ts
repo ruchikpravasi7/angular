@@ -24,7 +24,7 @@ export class FullComponent implements OnDestroy {
 	minisidebar = false;
 	boxed = false;
 	horizontal = false;
-	showHide = false; 
+	showHide = false;
 	url = '';
 	sidebarOpened = false;
 	status = false;
@@ -49,10 +49,10 @@ export class FullComponent implements OnDestroy {
 	}
 
 
-	ngOnInit() {}
+	ngOnInit() { }
 
 	clickEvent(): void {
-		 this.status = !this.status;
+		this.status = !this.status;
 	}
 
 }

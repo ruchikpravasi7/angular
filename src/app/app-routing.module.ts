@@ -8,13 +8,15 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
 import { AppBlankComponent } from './shared/layouts/blank/blank.component';
 import { FullComponent } from './shared/layouts/full/full.component';
 import { SearchComponent } from './search/search/search.component';
+import { StoreListingComponent } from './store/store-listing/store-listing.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/admin' },
   {
     path: 'admin', component: FullComponent,
     children: [
-      { path: 'search', component: SearchComponent }
+      { path: 'search', component: SearchComponent },
+      { path: 'store', component: StoreListingComponent }
     ]
   },
   { path: 'home', component: HomePageComponent },

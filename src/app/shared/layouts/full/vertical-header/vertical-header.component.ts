@@ -125,7 +125,7 @@ export class VerticalAppHeaderComponent {
 
   redirect(str: string) {
     if (str === 'login') {
-      //
+      this.router.navigate([str])
     } else {
       this.router.navigate(['admin', str])
     }

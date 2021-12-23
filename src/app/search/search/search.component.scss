@@ -1,0 +1,89 @@
+table {
+  width: 100%;
+  min-width: 500px;
+}
+
+th.mat-header-cell {
+  font-size: 15px;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.actions-header {
+  width: fit-content;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.reset-button {
+  border-radius: 40px;
+}
+
+.add-doctor-button {
+  border-radius: 40px;
+  float: right;
+  margin: 10px;
+}
+
+.spinner-class {
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+input[type="number"] {
+  height: 45px;
+  width: 45px;
+  font-size: 25px;
+  text-align: center;
+  border: 1px solid #000000;
+}
+
+.mat-row:hover {
+  background-color: #f5f5f5;
+}
+
+.search {
+  &__form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    &_field {
+      width: 180px;
+      margin: 0px 8px;
+      padding-top: 5px;
+    }
+
+    &_tab {
+      width: 250px;
+      margin: 0px 8px;
+      padding-top: 5px;
+    }
+  }
+
+  &__table {
+    margin: 0 18px 18px 18px;
+  }
+}
+
+.data__row {
+  cursor: pointer;
+}
+
+.mat-grid-tile,
+.mat-figure {
+  justify-content: left;
+}
+
+@media only screen and (max-width: 900px) {
+  table {
+    min-width: 480px;
+  }
+}

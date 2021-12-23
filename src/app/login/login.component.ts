@@ -1,27 +1,27 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { LoginServiceService } from '../shared/services/login-service.service';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 
 export class LoginComponent implements OnInit {
   // emailValue="namratathaker123@gmail.com"
   // passwordValue=""
   // emailValue;
-  passwordValue=new FormControl();
+  passwordValue = new FormControl();
   // resData;
-  userEmail:string;
-  constructor(private _loginService:LoginServiceService,private router:Router ) { }
+  userEmail: string;
+  constructor(private _loginService: LoginServiceService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  login(){
+  login() {
     // console.log(this.emailValue);
     // console.log(this.passwordValue.value);
     // this._loginService.getUser(this.emailValue,this.passwordValue.value).subscribe(data=>{
@@ -30,23 +30,23 @@ export class LoginComponent implements OnInit {
     //   console.log(data);
     // }).add(()=>{
     //   localStorage.setItem('token',this.resData.token);
-      
+
     //   if(this.resData.isDoc){
     //   this.router.navigate(['/doctor',this.resData.id]);
     //   }else{
     //     this.router.navigate(['/patient',this.resData.id]);
-        
+
     //   }
     // });
 
     // setTimeout(()=>{
-      // console.log(this.resData);
+    // console.log(this.resData);
 
     // },3000)
-    
+
   }
 
-  onSubmit(){
-    
+  onSubmit() {
+
   }
 }

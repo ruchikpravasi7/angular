@@ -1,1 +1,92 @@
-<h1>Hello</h1>
+<div style="margin-top: 20px">
+  <mat-grid-list cols="7" rowHeight="5rem">
+    <form class="form" [formGroup]="searchFilterForm">
+      <mat-grid-tile [colspan]="6">
+        <mat-form-field
+          [style.width.%]="25"
+          class="search__form_tab"
+          appearance="outline"
+        >
+          <mat-label>Search By Doctor or Clinic</mat-label>
+          <input
+            type="text"
+            aria-label="Search"
+            matInput
+            formControlName="search"
+            (keyup)="applyFilter($event.target.value)"
+          />
+        </mat-form-field>
+        <mat-form-field
+          [style.width.%]="20"
+          class="search__form_field"
+          appearance="outline"
+        >
+          <mat-label>Speciality</mat-label>
+          <input
+            type="text"
+            placeholder="Select One"
+            aria-label="string"
+            matInput
+            [matAutocomplete]="auto"
+            formControlName="speciality"
+          />
+          <mat-autocomplete
+            #auto="matAutocomplete"
+            (optionSelected)="specialityFilter($event.option.value)"
+          >
+            <mat-option
+              *ngFor="let option of specialityfilteredOptions | async"
+              [value]="option.name"
+            >
+              {{ option.name }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+        <mat-form-field
+          [style.width.%]="20"
+          class="search__form_field"
+          appearance="outline"
+        >
+          <mat-label>Location</mat-label>
+          <input
+            type="text"
+            placeholder="Select One"
+            aria-label="string"
+            matInput
+            [matAutocomplete]="locationauto"
+            formControlName="location"
+          />
+          <mat-autocomplete
+            #locationauto="matAutocomplete"
+            (optionSelected)="locationFilter($event.option.value)"
+          >
+            <mat-option
+              *ngFor="let location of locationfilteredOptions | async"
+              [value]="location"
+            >
+              {{ location }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <button mat-raised-button class="reset-button" (click)="resetFilters()">
+          Reset
+        </button>
+      </mat-grid-tile>
+    </form>
+  </mat-grid-list>
+</div>
+
+<mat-list>
+  <div mat-subheader>Search Results</div>
+  <mat-divider></mat-divider>
+  <mat-list-item *ngFor="let user of users">
+    <mat-icon mat-list-icon>account_circle</mat-icon>
+    <div mat-line>{{ user.doctorName }}</div>
+    <div mat-line>Clinic Name: {{ user.clinicName }}</div>
+    <div mat-line>{{ user.location }}</div>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>
