@@ -15,6 +15,7 @@ const routes: Routes = [
   {
     path: 'admin', component: FullComponent,
     children: [
+      { path: '', component: HomePageComponent },
       { path: 'search', component: SearchComponent },
       { path: 'store', component: StoreListingComponent }
     ]

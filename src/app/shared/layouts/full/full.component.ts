@@ -55,4 +55,8 @@ export class FullComponent implements OnDestroy {
 		this.status = !this.status;
 	}
 
+	home() {
+		this.router.navigate(['admin'])
+
+	}
 }
